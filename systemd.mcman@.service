@@ -1,0 +1,15 @@
+[Unit]
+Description=Minecraft Manager
+After=network.target
+PartOf=mcman.target
+
+[Service]
+Type=simple
+User=mcman
+EnvironmentFile=/etc/mcman/instance/%i/environment
+WorkingDirectory=/usr/lib/mcman
+ExecStart=/usr/bin/java -jar /usr/lib/mcman/${PROVIDER}/%{VERSION}/server.jar ${OPTIONS}
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

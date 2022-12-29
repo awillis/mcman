@@ -1,0 +1,6 @@
+[Unit]
+Description=Minecraft Managed Instances
+Wants=
+
+[Install]
+WantedBy=multi-user.target
