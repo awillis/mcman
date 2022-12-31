@@ -3,7 +3,6 @@ from base import Provider
 
 import jmespath
 import logging
-# TODO: update provider fetch_file to also return sha256 hashes
 
 class Paper(Provider):
     """

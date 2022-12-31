@@ -31,8 +31,16 @@ class Provider:
 		raise NotImplementedError
 
 	@classmethod
+	def name(cls) -> str:
+		return cls.__name__.lower()
+
+	@classmethod
+	def path(cls, version: str) -> str:
+		return cls._format_filename(version).as_posix()
+
+	@classmethod
 	def _format_filename(cls, version: str) -> Path:
-		return Path(PROVIDER_DIR).joinpath(cls.__name__.lower()).joinpath(version).joinpath("server.jar")
+		return Path(PROVIDER_DIR).joinpath(cls.name()).joinpath(version).joinpath("server.jar")
 
 	@classmethod
 	def exists(cls, version: str) -> bool:

@@ -35,3 +35,5 @@ class Mojang(Provider):
 
 		if server.sha1 != checksums.get("sha1"):
 			logging.error(f"sha1 checksum mismatch")
+
+		logging.info("By downloading minecraft server software from Mojang, you agree to the EULA found at https://account.mojang.com/documents/minecraft_eula")

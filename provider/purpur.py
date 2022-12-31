@@ -2,7 +2,6 @@ from typing import List
 from base import Provider
 
 import jmespath
-# TODO: update provider fetch_file to also return md5 hashes
 
 
 class Purpur(Provider):

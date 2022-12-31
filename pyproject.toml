@@ -2,7 +2,7 @@
 name = "mcman"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Alan Willis <alan@amekoshi.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -10,6 +10,7 @@ requests = "^2.28.1"
 blessings = "^1.7"
 pylint = "^2.15.9"
 jmespath = "^1.0.1"
+pystemd = "^0.11.0"
 
 [tool.poetry.dev-dependencies]
 

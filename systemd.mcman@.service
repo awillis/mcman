@@ -6,9 +6,9 @@ PartOf=mcman.target
 [Service]
 Type=simple
 User=mcman
-EnvironmentFile=/etc/mcman/instance/%i/environment
-WorkingDirectory=/usr/lib/mcman
-ExecStart=/usr/bin/java -jar /usr/lib/mcman/${PROVIDER}/%{VERSION}/server.jar ${OPTIONS}
+EnvironmentFile=/var/lib/mcman/instance/%i/environment
+WorkingDirectory=/var/lib/mcman/instance/%i
+ExecStart=/usr/bin/java ${JAVA_OPTIONS} -jar /var/lib/mcman/instance/%i/server.jar
 Restart=on-failure
 
 [Install]
